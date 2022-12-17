@@ -60,11 +60,8 @@ int main(int argc, char* argv[]) {
 		
 		// construct the key based on the processed keyword
 		timer->start();
-		start = MPI_Wtime();
 		key = cipher->constructKey(textLength, keyword);
-		cout << "The generated key is: " << key << endl;
 		timer->stop();
-		end = MPI_Wtime();
 		cout << "The creation of the key took " << timer->getDuration() << "ms" << endl;
 
 		// Send the number of elements, the subarray from the word and the corresponding subarray of key
@@ -237,8 +234,6 @@ void readKeyword(string &keyword) {
 	// process the keyword by removing the invalid characters (spaces, punctuation or numbers)
 	regex pattern(PREPROCESSING_PATTERN);
 	keyword = regex_replace(keyword, pattern, "");
-
-	cout << "Processed keyword: " << keyword << endl;
 }
 
 /*
