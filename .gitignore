@@ -34,3 +34,8 @@
 .vs
 Debug
 x64
+output.txt
+*.vcxproj
+*.vcxproj.*
+VigenereMPI/output.txt
+
