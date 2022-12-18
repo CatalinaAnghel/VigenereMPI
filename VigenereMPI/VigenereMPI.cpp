@@ -89,7 +89,7 @@ int main(int argc, char* argv[]) {
 			number = quotient;
 			numberReminder = quotient + reminder;
 			timer->stop();
-			cout << "Splitting and sending the word and the key: " << timer->getDuration() << "ms" << endl;
+			cout << "Splitting and sending the word and the key took " << timer->getDuration() << "ms." << endl;
 		}
 		else {
 			number = textLength;
@@ -146,7 +146,7 @@ int main(int argc, char* argv[]) {
 
 		// stop the benchmarking
 		timer->stop();
-		cout << "Total duration: " << timer->getDuration() << "ms" << endl;
+		cout << "The encryption/decryption operation took " << timer->getDuration() << "ms." << endl;
 		
 		// show the results
 		showResult(result);
